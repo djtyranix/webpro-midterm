@@ -1,0 +1,154 @@
+.my-border-green{
+    border: 1px solid green;
+}
+
+.my-border-red{
+    border: 1px solid red;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: .88rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    text-align: left;
+    /* background-color: #eef1f3; */
+    background: linear-gradient(#F2F2F2, #EEE);
+    min-height: 100vh;
+}
+
+.mt-100 {
+    margin-top: 100px
+}
+
+.card {
+    box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03), 0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03), 0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05), 0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
+    border-width: 0;
+    transition: all .2s
+}
+
+.card-hoverable:hover {
+    background-color: #DDD;
+}
+
+.card-header:first-child {
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    border-bottom-width: 1px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: .625rem;
+    height: 3.5rem;
+    text-transform: uppercase;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(26, 54, 126, 0.125)
+}
+
+.btn {
+    font-size: 0.8rem;
+    font-weight: 500;
+    outline: none !important;
+    position: relative;
+    transition: color 0.15s, background-color 0.15s, border-color 0.15s, box-shadow 0.15s
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 1.25rem
+}
+
+.card-body p {
+    font-size: 13px
+}
+
+a {
+    text-decoration: none !important;
+    background-color: transparent
+}
+
+.media img {
+    width: 40px;
+    height: auto
+}
+
+.block-link {
+    display: block;
+}
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+.forum-content {
+    float: left;
+    padding: 1rem 1rem;
+}
+
+.user-detail {
+    padding: 1rem 2rem 1rem 1.75rem;
+}
+
+.content-detail {
+    min-width: 78%;
+    max-width: 78%;
+    padding-top: 0;
+    border-left: #CCC solid 1px;
+    min-height: 25vh;
+}
+
+.thread-title {
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+hr {
+    margin-top: .45rem;
+}
+
+.footer {
+    min-height: 8rem;
+}
+
+.copyright {
+    padding: 1.2rem;
+}
+
+.main-container {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.main-card {
+    padding: 5%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.btn-homepage {
+    min-width: 10rem;
+    min-height: 3rem;
+    border-radius: 10rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
