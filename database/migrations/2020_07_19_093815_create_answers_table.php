@@ -17,6 +17,7 @@ class CreateAnswersTable extends Migration
             $table->id();
             $table->bigInteger('id_answer');
             $table->bigInteger('id_question');
+            $table->foreign('id_question')->references('id_question')->on('questions');
             $table->string('the_answer', 1000);
             $table->timestamps();
         });
