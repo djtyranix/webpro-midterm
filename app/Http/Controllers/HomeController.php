@@ -31,8 +31,8 @@ class HomeController extends Controller
         $user_id = Auth::user()->id;
 
         $questions = DB::table('questions')
-                        ->join('users', 'users.id', '=', 'questions.id_question')
-                        ->select('users.name', 'questions.id_question', 'questions.created_at as created_at', 'questions.updated_at', 'questions.title_question', 'questions.detail_question', 'users.created_at as user_created_at', 'questions.id as id')
+                        ->join('users', 'users.id', '=', 'questions.id_user')
+                        ->select('users.name', 'questions.id_user', 'questions.created_at as created_at', 'questions.updated_at', 'questions.title_question', 'questions.detail_question', 'users.created_at as user_created_at', 'questions.id as id')
                         ->latest('questions.updated_at')
                         ->latest('questions.created_at')
                         ->paginate(5)->OnEachSide(2);
@@ -49,8 +49,8 @@ class HomeController extends Controller
 
 
         $questions = DB::table('questions')
-                        ->join('users', 'users.id', '=', 'questions.id_question')
-                        ->select('users.name', 'questions.id_question', 'questions.created_at as created_at', 'questions.updated_at as updated_at', 'questions.title_question', 'questions.detail_question', 'users.created_at as user_created_at', 'questions.id as id')
+                        ->join('users', 'users.id', '=', 'questions.id_user')
+                        ->select('users.name', 'questions.id_user', 'questions.created_at as created_at', 'questions.updated_at as updated_at', 'questions.title_question', 'questions.detail_question', 'users.created_at as user_created_at', 'questions.id as id')
                         ->where('title_question', 'like', '%' . $key . '%')
                         ->latest('questions.updated_at')
                         ->latest('questions.created_at')

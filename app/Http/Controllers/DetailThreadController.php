@@ -29,7 +29,7 @@ class DetailThreadController extends Controller
     {   
         $user_id = Auth::user()->id;
         $questions = DB::table('questions')
-                        ->join('users', 'users.id', '=', 'questions.id_question')
+                        ->join('users', 'users.id', '=', 'questions.id_user')
                         ->select('users.name as name', 'questions.created_at', 'questions.updated_at',
                                 'questions.title_question', 'questions.detail_question', 'questions.id as id', 'users.created_at as user_created_at')
                         ->where('id_question', '=', $user_id)
@@ -45,12 +45,12 @@ class DetailThreadController extends Controller
         $user_id = Auth::user()->id;
 
         $answers = DB::table('answers')
-                ->join('users', 'users.id', '=', 'answers.id_answer')
+                ->join('users', 'users.id', '=', 'answers.id_user')
                 ->join('questions', 'questions.id', '=', 'answers.id_question')
                 ->select('answers.created_at', 'answers.updated_at', 'users.id as answer_user_id', 
-                        'answers.id_question', 'questions.id as question_id', 'answers.id', 'answers.id_answer', 'users.created_at as user_created_at', 'answers.the_answer',
+                        'answers.id_question', 'questions.id as question_id', 'answers.id', 'answers.id_user', 'users.created_at as user_created_at', 'answers.the_answer',
                         'questions.title_question')
-                ->where('answers.id_answer', '=', $user_id)
+                ->where('answers.id_user', '=', $user_id)
                 ->latest('answers.created_at')
                 ->paginate(5)->onEachSide(2);
 
@@ -66,17 +66,17 @@ class DetailThreadController extends Controller
         $user_id = Auth::user()->id;
 
         $questions = DB::table('questions')
-                        ->join('users', 'users.id', '=', 'questions.id_question')
+                        ->join('users', 'users.id', '=', 'questions.id_user')
                         ->select('users.name as name', 'questions.created_at', 'questions.updated_at', 'users.id as user_id', 
-                                'questions.title_question', 'questions.detail_question', 'questions.id as id', 'users.created_at as user_created_at', 'questions.id_question')
+                                'questions.title_question', 'questions.detail_question', 'questions.id as id', 'users.created_at as user_created_at', 'questions.id_user')
                         ->where('questions.id', '=', $id)
                         ->first();
 
         $answers = DB::table('answers')
-                        ->join('users', 'users.id', '=', 'answers.id_answer')
+                        ->join('users', 'users.id', '=', 'answers.id_user')
                         ->join('questions', 'questions.id', '=', 'answers.id_question')
                         ->select('users.name as name', 'answers.created_at', 'answers.updated_at', 'users.id as answer_user_id', 
-                                'answers.id_question', 'questions.id as question_id', 'answers.id', 'answers.id_answer', 'users.created_at as user_created_at', 'answers.the_answer')
+                                'answers.id_question', 'questions.id as question_id', 'answers.id', 'answers.id_user', 'users.created_at as user_created_at', 'answers.the_answer')
                         ->where('answers.id_question', '=', $id)
                         ->paginate(5)->onEachSide(2);
 

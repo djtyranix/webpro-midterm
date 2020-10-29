@@ -73,7 +73,7 @@
                         </div>
                     </div>
                 </div>
-                @if ($user_id == $questions->id_question)
+                @if ($user_id == $questions->id_user)
                 <div class="card-footer">
                     <div class="container d-flex justify-content-end">
                         <a href="{{ route('edit_thread', $questions->id) }}" class="pr-3">Edit <i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
@@ -144,7 +144,7 @@
                         </div>
                     </div>
                 </div>
-                @if ($user_id == $answer->id_answer)
+                @if ($user_id == $answer->id_user)
                 <div class="card-footer">
                     <div class="container d-flex justify-content-end">
                         <a href="javascript:editOpen{{ $answer->id }}()" class="pr-3">Edit <i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>

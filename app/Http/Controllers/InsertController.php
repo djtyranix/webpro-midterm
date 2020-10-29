@@ -25,7 +25,7 @@ class InsertController extends Controller
         Question::create([
             'title_question' => $request->title_question,
             'detail_question' => $request->detail_question,
-            'id_question' => $user_id
+            'id_user' => $user_id
         ]);
 
         $last_id = DB::table('questions')
@@ -46,7 +46,7 @@ class InsertController extends Controller
         Answer::create([
             'the_answer' => $request->the_answer,
             'id_question' => $request->id_question,
-            'id_answer' => $user_id
+            'id_user' => $user_id
         ]);
 
         return redirect('thread/'. $request->id_question);

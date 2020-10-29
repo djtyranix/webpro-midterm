@@ -15,10 +15,12 @@ class CreateQuestionsTable extends Migration
     {
         Schema::create('questions', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('id_question');
+            $table->unsignedbigInteger('id_user');
             $table->string('title_question', 255);
             $table->string('detail_question', 1000);
             $table->timestamps();
+
+            $table->foreign('id_user')->references('id')->on('users');
         });
     }
 
