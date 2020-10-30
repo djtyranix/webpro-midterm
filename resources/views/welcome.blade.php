@@ -61,17 +61,17 @@
     <meta name="msapplication-TileImage" content="{{ URL::to('/') }}/images/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 </head>
-<body style="overflow: scroll;">
+<body style="">
     <main>
         <div class="welcome-top">
             <img src="{{ URL::to('/') }}/images/logo.png" alt="logo">
-            <h1>READIT</h1>
+            <h1 style="margin-left: 1.5rem;">READIT</h1>
         </div>
         <div class="welcome">
             <div class="welcome-rectangle"></div>
             <div class="welcome-content">
                 <h2>Hello,</h2>
-                <h1>Commander!</h1>
+                <h1><strong>Commander!</strong></h1>
                 <hr>
                 <p>Let's join us to discuss anything!</p>
                 <div class="welcome-button">
@@ -81,36 +81,12 @@
             </div>
             <div class="welcome-rectangle"></div>
         </div>
-        <!-- <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-12 text-center">
-                    <img src="{{ URL::to('/') }}/images/logo.png" alt="logo" style="width: 12rem;" class="mt-5 mb-1">
-                    <h1 style="font-size: 4rem;" class="mb-0">
-                        Welcome to {{config('app.name')}}
-                    </h1>
-                    <h1 style="font-size: 8rem;" class="mb-5">
-                        <strong>Commander!</strong>
-                    </h1>
-                    <hr>
-                    <h1 class="mt-5 mb-1">
-                        Join us to discuss anything!
-                    </h1>
-                    <h3 class="mb-5">
-                        (yes, absolutely anything!)
-                    </h3>
-                    <a href="{{ route('login') }}" class="btn btn-success btn-lg btn-homepage mr-3 mb-5">Login</a><a href="{{ route('register') }}" class="btn btn-primary btn-lg btn-homepage mb-5">Register</a>
-                </div>
-            </div>
-        </div> -->
     </main>
     <script>
         var currentTitle = 'Welcome to Readit!';
         document.title = 'ReadIt | ' + currentTitle;
     </script>
     <footer>
-        <div class="footer w-100">
-
-        </div>
         <div class="copyright w-100">
             <center>&copy; 2020 ReadIt. Proudly made with love.</center>
         </div>
