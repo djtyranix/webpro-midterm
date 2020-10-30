@@ -38,6 +38,10 @@
         }
     </style>
 
+    <!-- NEW CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url('/css/style.css') }}" />
+
     <!-- FAVICON -->
     <link rel="apple-touch-icon" sizes="57x57" href="{{ URL::to('/') }}/images/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="{{ URL::to('/') }}/images/favicon/apple-icon-60x60.png">
@@ -57,9 +61,27 @@
     <meta name="msapplication-TileImage" content="{{ URL::to('/') }}/images/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 </head>
-<body style="overflow: hidden;">
+<body style="overflow: scroll;">
     <main>
-        <div class="container">
+        <div class="welcome-top">
+            <img src="{{ URL::to('/') }}/images/logo.png" alt="logo">
+            <h1>READIT</h1>
+        </div>
+        <div class="welcome">
+            <div class="welcome-rectangle"></div>
+            <div class="welcome-content">
+                <h2>Hello,</h2>
+                <h1>Commander!</h1>
+                <hr>
+                <p>Let's join us to discuss anything!</p>
+                <div class="welcome-button">
+                    <a class="button login" href="{{ route('login') }}">Login</a>
+                    <a class="button register" href="{{ route('register') }}">Register</a>
+                </div>
+            </div>
+            <div class="welcome-rectangle"></div>
+        </div>
+        <!-- <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-12 text-center">
                     <img src="{{ URL::to('/') }}/images/logo.png" alt="logo" style="width: 12rem;" class="mt-5 mb-1">
@@ -79,7 +101,7 @@
                     <a href="{{ route('login') }}" class="btn btn-success btn-lg btn-homepage mr-3 mb-5">Login</a><a href="{{ route('register') }}" class="btn btn-primary btn-lg btn-homepage mb-5">Register</a>
                 </div>
             </div>
-        </div>
+        </div> -->
     </main>
     <script>
         var currentTitle = 'Welcome to Readit!';
