@@ -32,7 +32,7 @@ class DetailThreadController extends Controller
                         ->join('users', 'users.id', '=', 'questions.id_user')
                         ->select('users.name as name', 'questions.created_at', 'questions.updated_at',
                                 'questions.title_question', 'questions.detail_question', 'questions.id as id', 'users.created_at as user_created_at')
-                        ->where('id_question', '=', $user_id)
+                        ->where('questions.id_user', '=', $user_id)
                         ->latest('questions.created_at')
                         ->paginate(5)->onEachSide(2);
 
