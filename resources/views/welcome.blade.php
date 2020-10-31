@@ -22,7 +22,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css?v=1.4') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css?v=1.5') }}" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- NEW CSS -->
@@ -47,7 +47,7 @@
     <meta name="msapplication-TileImage" content="{{ URL::to('/') }}/images/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 </head>
-<body style="overflow-x: hidden;">
+<body>
     <main>
         <div class="welcome-top">
             <img src="{{ URL::to('/') }}/images/logo.png" alt="logo">

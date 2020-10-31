@@ -173,7 +173,7 @@ html {
 
 .welcome {
     margin-top: 4rem;
-    min-height: 70vh;
+    min-height: 52vh;
 }
 
 .welcome-rectangle {
@@ -241,6 +241,10 @@ html {
 /* RESPONSIVE LAYOUTING */
 /* // Small devices (landscape phones, less than 768px) Smaller than iPads */
 @media screen and (max-width: 767.98px) {
+    .welcome {
+        min-height: 60vh;
+    }
+
     .button-welcome {
         padding: 2vw 5vw;
         font-size: 5vw;
