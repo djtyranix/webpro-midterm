@@ -10,12 +10,12 @@ class DeleteController extends Controller
 {
     public function delete_thread($id)
     {
-        $questions = DB::table('questions')
-                        ->where('questions.id',  $id)
-                        ->delete();
-
         $answers = DB::table('answers')
                         ->where('answers.id_question', $id)
+                        ->delete();
+                        
+        $questions = DB::table('questions')
+                        ->where('questions.id',  $id)
                         ->delete();
 
         return redirect('/home');
