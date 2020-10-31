@@ -4,7 +4,7 @@
 
 <div class="container mt-5 mb-3">
     <div class="row justify-content-between">
-        <div class="col-3">
+        <div class="col-xl-12">
             <h2>My <strong>Question</strong></h2>
         </div>
     </div>
@@ -16,7 +16,7 @@
 @foreach ($questions as $question)
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-xl-12">
             <div class="card card-hoverable mb-4">
                 <div class="card-body">     
                     <a style="text-decoration: none; color: #000;" class="stretched-link" href="{{ route('thread', $question->id) }}">
@@ -41,7 +41,7 @@
 
 <!-- Pagination -->
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-xl-12">
         <div class="container d-flex justify-content-end">
             {{ $questions->links() }}
         </div>

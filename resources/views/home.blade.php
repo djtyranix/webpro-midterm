@@ -24,10 +24,10 @@
                 <form action="{{ route('ask') }}" method="POST">
                     @csrf
                     <div class="form-group">
-                        <input type="text" class="form-control" name ="title_question" placeholder="What is up? Tell us.">
+                        <input type="text" class="form-control" name ="title_question" placeholder="What is up? Tell us." required>
                     </div>
                     <div class="form-group">
-                        <textarea name="detail_question" class="form-control" id="detail_question" cols="15" rows="5" style="resize: none;" placeholder="Provide details for your issues/questions."></textarea>
+                        <textarea name="detail_question" class="form-control" id="detail_question" cols="15" rows="5" style="resize: none;" placeholder="Provide details for your issues/questions." required></textarea>
                     </div>
                     <button class="btn btn-outline-primary btn-block">
                         {{ __('Submit') }}
@@ -44,7 +44,7 @@
 @foreach ($questions as $question)
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-xl-12">
             <div class="card card-hoverable mb-4">
                 <div class="card-body">     
                     <a style="text-decoration: none; color: #000;" class="stretched-link" href="{{ route('thread', $question->id) }}">
@@ -75,7 +75,7 @@
 
 <!-- Pagination -->
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-xl-12">
         <div class="container d-flex justify-content-end">
             {{ $questions->links() }}
         </div>

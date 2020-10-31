@@ -5,7 +5,7 @@
 <?php use \App\Http\Controllers\myProfileController; ?>
 
 <div class="row mt-4 py-5">
-    <div class="col-md-12">
+    <div class="col-xl-12">
         <div class="container">
             <div>
                 <center><img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar rounded-circle img-thumbnail" alt="avatar" style="width: 12em;"></center>
@@ -19,7 +19,7 @@
 
 <!-- CARD DECK -->
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-xl-12">
         <div class="container">
             <div class="card-deck">
                 <div class="card">
