@@ -173,7 +173,7 @@ html {
 
 .welcome {
     margin-top: 4rem;
-    height: 500px;
+    min-height: 70vh;
 }
 
 .welcome-rectangle {
@@ -195,7 +195,7 @@ html {
 .welcome-content h1 {
     font-size: 5rem;
     font-family: 'Nunito';
-    margin: 0px;
+    margin: 0 auto;
 }
 
 .welcome-content h2 {
@@ -218,8 +218,8 @@ html {
     margin: 5.2rem auto 0rem;
 }
 
-.button {
-    margin: 0 .8rem;
+.button-welcome {
+    margin: 0 .8rem 1rem;
     padding: .9rem 2rem;
     font-family: 'Nunito';
     font-size: 1.5rem;
@@ -233,7 +233,53 @@ html {
     -moz-transition: ease-in-out .2s;
 }
 
-.button:hover {
+.button-welcome:hover {
     background-color:  #343A40;
     color: white;
+}
+
+/* RESPONSIVE LAYOUTING */
+/* // Small devices (landscape phones, less than 768px) Smaller than iPads */
+@media screen and (max-width: 767.98px) {
+    .button-welcome {
+        padding: 2vw 5vw;
+        font-size: 5vw;
+        border-radius: 5vw;
+    }
+    .welcome-content h1 {
+        font-size: 11vw;
+        font-family: 'Nunito';
+        margin: 0 auto;
+    }
+
+    .welcome-content h2 {
+        font-size: 8vw;
+        font-family: 'Nunito';
+        font-weight: normal;
+        margin: 0px;
+    }
+
+    .welcome-content p {
+        font-size: 6vw;
+        font-family: 'Nunito';
+    }
+
+    .welcome-top h1 {
+        font-family: 'Montserrat';
+        font-size: 12vw;
+        letter-spacing: 1rem;
+        margin: 2.5rem auto 1.5rem;
+    }
+
+    .mobile-heading-home h2 {
+        font-size: 5vw;
+    }
+
+    .mobile-heading-home h1 {
+        font-size: 8vw;
+    }
+
+    .mobile-ask .card .card-body h2 {
+        font-size: 7vw;
+    }
 }

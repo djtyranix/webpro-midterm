@@ -1,11 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="row justify-content-center align-items-center mt-3 mb-5">
-    <div class="col-3 mr-5 mt-5">
+<center>
+<div class="row justify-content-center align-items-center mt-3 mb-5 container">
+    <div class="col-xl-6 mt-xl-5 mobile-heading-home">
         <h1>Welcome to ReadIt, <strong>commander</strong>.</h1>
         <h2 class="text-justify">You can ask everything here. Before asking, check if similar question is already answered here.</h2>
-        <div class="my-5">
+        <div class="my-5 mobile-search">
             <form action="{{ route('search') }}" method="GET">
                 <div class="form-group has-search">
                     <span class="fa fa-search form-control-feedback fa-lg"></span>
@@ -16,7 +17,7 @@
         </div>
     </div>
 
-    <div class="col-3 ml-5">
+    <div class="col-xl-6 mobile-ask">
         <div class="card">
             <div class="card-body">
                 <h2 class="text-center mb-4">Ask the community!</h2>
@@ -36,6 +37,7 @@
         </div>
     </div>
 </div>
+</center>
 
 {{-- fetching all question data retrived from HomeController@index --}}
 

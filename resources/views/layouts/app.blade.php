@@ -22,21 +22,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css?v=1.1') }}" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        .content {
-            text-align: center;
-        }
-
-        .title {
-            font-size: 84px;
-        }
-
-        .m-b-md {
-            margin-bottom: 30px;
-        }
-    </style>
 
     <!-- FAVICON -->
     <link rel="apple-touch-icon" sizes="57x57" href="{{ URL::to('/') }}/images/favicon/apple-icon-57x57.png">

@@ -22,21 +22,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/mystyle.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css?v=1.1') }}" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        .content {
-            text-align: center;
-        }
-
-        .title {
-            font-size: 84px;
-        }
-
-        .m-b-md {
-            margin-bottom: 30px;
-        }
-    </style>
 
     <!-- NEW CSS -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -60,11 +47,11 @@
     <meta name="msapplication-TileImage" content="{{ URL::to('/') }}/images/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 </head>
-<body style="">
+<body style="overflow-x: hidden;">
     <main>
         <div class="welcome-top">
             <img src="{{ URL::to('/') }}/images/logo.png" alt="logo">
-            <h1 style="margin-left: 1.5rem;">READIT</h1>
+            <h1 style="margin-left: 3vh;">READIT</h1>
         </div>
         <div class="welcome">
             <div class="welcome-rectangle"></div>
@@ -74,8 +61,8 @@
                 <hr>
                 <p>Let's join us to discuss anything!</p>
                 <div class="welcome-button">
-                    <a class="button login" href="{{ route('login') }}">Login</a>
-                    <a class="button register" href="{{ route('register') }}">Register</a>
+                    <a class="button-welcome" href="{{ route('login') }}">Login</a>
+                    <a class="button-welcome" href="{{ route('register') }}">Register</a>
                 </div>
             </div>
             <div class="welcome-rectangle"></div>
